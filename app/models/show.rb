@@ -12,6 +12,6 @@ class Show < ActiveRecord::Base
     
   end
   def self.popular_shows 
-    Show.where()
+    Show.where(rating: > 5).count 
   end
 end
